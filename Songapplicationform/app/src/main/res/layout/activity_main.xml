@@ -47,6 +47,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/logo"
@@ -71,21 +72,25 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/applicatelist"
         android:layout_width="match_parent"
-        tools:listitem=""
         android:layout_height="0dp"
         android:layout_margin="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/applicate"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="신청하기"
-        android:fontFamily="@font/sleigothic"
-        android:textColor="@color/white"
         android:background="@drawable/shape_round_btn"
         android:backgroundTint="@color/black"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="12dp"
+        tools:listitem="@layout/item_list" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/applicatebtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_round_btn"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/sleigothic"
+        android:text="신청하기"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
