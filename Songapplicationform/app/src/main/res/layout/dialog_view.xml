@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
@@ -22,14 +23,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:gravity="center_horizontal"
-        android:text="방 생성"
+        android:text="곡 신청하기"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:fontFamily="@font/sleigothic"/>
 
     <EditText
-        android:id="@+id/room_name"
+        android:id="@+id/songname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -60,10 +61,10 @@
         />
     
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/made_room_dialog"
+        android:id="@+id/applicatebtn"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:text="생성하기"
+        android:text="신청하기"
         android:background="@drawable/white_background"
         android:textColor="@color/black"
         android:fontFamily="@font/sleigothic"
