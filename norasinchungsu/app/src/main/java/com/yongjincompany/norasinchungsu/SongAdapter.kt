@@ -13,11 +13,17 @@ class SongAdapter : RecyclerView.Adapter<SongAdapter.SongViewHolder>() {
     inner class SongViewHolder(val binding: ItemListBinding) : RecyclerView.ViewHolder(binding.root)
 
     private val diffCallback = object : DiffUtil.ItemCallback<SongListResponse>() {
-        override fun areItemsTheSame(oldItem: SongListResponse, newItem: SongListResponse): Boolean {
+        override fun areItemsTheSame(
+            oldItem: SongListResponse,
+            newItem: SongListResponse
+        ): Boolean {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: SongListResponse, newItem: SongListResponse): Boolean {
+        override fun areContentsTheSame(
+            oldItem: SongListResponse,
+            newItem: SongListResponse
+        ): Boolean {
             return oldItem == newItem
         }
     }
@@ -25,7 +31,9 @@ class SongAdapter : RecyclerView.Adapter<SongAdapter.SongViewHolder>() {
     private val differ = AsyncListDiffer(this, diffCallback)
     var songs: List<SongListResponse>
         get() = differ.currentList
-        set(value) { differ.submitList(value) }
+        set(value) {
+            differ.submitList(value)
+        }
 
     override fun getItemCount() = songs.size
 
@@ -35,7 +43,8 @@ class SongAdapter : RecyclerView.Adapter<SongAdapter.SongViewHolder>() {
                 LayoutInflater.from(parent.context),
                 parent,
                 false
-            ))
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: SongViewHolder, position: Int) {
